@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App4.MainPage">
+
+    <StackLayout VerticalOptions="Center">
+        <Label Text="RSVP LOGIN" FontAttributes="Bold" FontSize="45" HorizontalTextAlignment="Center" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="UserName: " VerticalOptions="Center" FontSize="20" />
+            <Entry x:Name="UserName" Placeholder="Enter your UserName" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Password: " FontSize="20" VerticalOptions="Center" />
+            <Entry x:Name="Password" Placeholder="Enter your Password" IsPassword="True" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Login" Clicked="Login_Clicked" FontSize="20" FontAttributes="Bold" />
+            <Button Text="Register" Clicked="Register_Clicked" FontSize="20" FontAttributes="Bold" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App4.EventDetailPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Label x:Name="EventTitle" Text="Event Title" FontAttributes="Bold" FontSize="45" HorizontalTextAlignment="Center"
+                HorizontalOptions="Center" />
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Host By: " FontSize="20" VerticalOptions="Center" />
+                <Label x:Name="Host" Text="" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Date: " FontSize="20" VerticalOptions="Center" />
+                <Label x:Name="Date" Text="" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Time: " FontSize="20" VerticalOptions="Center" />
+                <Label x:Name="Time" Text="" FontSize="20" VerticalOptions="Center" HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+                <Label Text="Location:"   FontSize="20" VerticalOptions="Center" Margin="20,0,0,0" 
+                       LineHeight="-1" MinimumWidthRequest="100" MaxLines="1" />
+                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+                <Label x:Name="Location" Text="" FontSize="20" VerticalOptions=
+                       "Center" Margin="5,0,0,5" HorizontalOptions="Start"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <Label Text="Description" Margin="20,0,0,0" />
+
+            <Frame BorderColor="#000000" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="20,0">
+                <Label x:Name="Description" Text="" FontSize="20" MaxLines="10" />
+            </Frame>
+            <Label Text="PLease Click YES if you plan on going" HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="RSVP:" FontSize="20" />
+                <Button Text="Yes" Clicked="Yes_Event" FontSize="20" FontAttributes="Bold" 
+                        Margin="0,0,10,0" Padding="0" />
+                <Button Text="No" Clicked="No_Event" FontSize="20" FontAttributes="Bold" />
+            </StackLayout>
+            <ListView 
+            x:Name="eventList">
+                <!--ItemSelected="OnListViewItemSelected" >-->
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <ViewCell Height="40">
+                            <Label x:Name="EventTitle"
+                       Margin="15,0,0,0" 
+                       FontSize="20" 
+                       TextColor="#1B4F72" 
+                       BackgroundColor="Ivory"
+                       Text="{Binding PersonName}" 
+                       LineBreakMode="TailTruncation">
+                            </Label>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

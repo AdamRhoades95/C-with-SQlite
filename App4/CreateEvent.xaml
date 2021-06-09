@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App4.CreateEvent">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="CREATE EVENT" FontAttributes="Bold" FontSize="45"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="20,0,0,0">
+                <Label Text="Event Title: " FontSize="20" VerticalOptions="Center" />
+                <Entry x:Name="EventTitle" Placeholder="Enter Event" FontSize="20" Margin="0,0,20,0" WidthRequest="200" PlaceholderColor="#9D9D9D" BackgroundColor="#FFFFFD" IsPassword="False" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="20,0,0,0">
+                <Label Text="Host Name: " FontSize="20" VerticalOptions="Center" />
+                <Entry x:Name="Host" Placeholder="Enter Host Name" FontSize="20" Margin="0,0,20,0" WidthRequest="200" PlaceholderColor="#9D9D9D" BackgroundColor="#FFFFFD" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="20,0,0,0">
+                <Label Text="Address: " FontSize="20" VerticalOptions="Center" />
+                <Entry x:Name="Address" Placeholder="Enter event Address" FontSize="20" Margin="0,0,20,0" WidthRequest="200" PlaceholderColor="#9D9D9D" BackgroundColor="#FFFFFD" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="20,0,0,0">
+                <Label Text="County:" FontSize="18" VerticalOptions="Center" />
+                <Entry x:Name="County" Placeholder="Enter County" FontSize="20" Margin="0,0,0,0" WidthRequest="150" PlaceholderColor="#9D9D9D" BackgroundColor="#FFFFFD" />
+
+                <Label Text="State:" FontSize="18" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Entry x:Name="State" Placeholder="ex. Va." FontSize="20" Margin="0,0,0,0" WidthRequest="70" PlaceholderColor="#9D9D9D" BackgroundColor="#FFFFFD" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0">
+                <Label Text="Zipcode: " FontSize="18" VerticalOptions="Center" />
+                <Entry x:Name="Zipcode" Placeholder="22551" FontSize="20" Margin="0,0,20,0" WidthRequest="70" PlaceholderColor="#9D9D9D" BackgroundColor="#FFFFFD" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="20,0,0,0">
+                <Label Text="Date: " FontSize="20" VerticalOptions="Center" />
+                <Entry x:Name="Date" Placeholder="Enter Date" FontSize="20" Margin="0,0,20,0" WidthRequest="200" PlaceholderColor="#9D9D9D" BackgroundColor="#FFFFFD" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="20,0,0,0">
+                <Label Text="Time: " FontSize="20" VerticalOptions="Center" />
+                <Entry x:Name="Time" Placeholder="Enter Event Time" FontSize="20" Margin="0,0,20,0" WidthRequest="200" PlaceholderColor="#9D9D9D" BackgroundColor="#FFFFFD" />
+            </StackLayout>
+            <Label Text="Description" Margin="20,0,0,0" HorizontalOptions="Start" />
+            
+                <Frame BorderColor="#000000" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="20,0">
+                <Entry x:Name="Description" Placeholder="Enter Event Description Here" FontSize="16" />
+            </Frame>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Create" Clicked="Submit_Event" FontSize="20" FontAttributes="Bold" />
+                <Button Text="Cancel" Clicked="Cancel_Event" FontSize="20" FontAttributes="Bold" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
